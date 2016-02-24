@@ -40,6 +40,7 @@ char mygetc()
 
 Key parseChar(const char c){
 	char c2;
+	if(c==EOF) return INPUT_END_KEY;
 	switch(c){
 		case ESC_KEY:
 			c2 = mygetc();

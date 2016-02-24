@@ -4,8 +4,9 @@
 #include "cmdReader.h"
 
 static char * exec_file;
+
 static void usage(){
-	printf("Usage: %s [ -file < doFile > ]\n", exec_file);
+	printf("Usage: %s \n", exec_file);
 }
 
 static void my_exit(){ 
@@ -15,10 +16,7 @@ static void my_exit(){
 
 int main(int argc, char** argv){
 	exec_file = argv[0];
-
-	if(argc == 3) {
-		usage();
-	}
+	
 	if(argc != 1){
 		fprintf(stderr, "Error: argc != 1\n");
 		my_exit();
